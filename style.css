@@ -1,0 +1,115 @@
+@media (max-width: 768px) {
+    /* Estilos para telas menores, como smartphones */
+}
+  
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+}
+  
+@media (min-width: 1025px) {
+    /* Estilos para telas maiores, como desktops */
+}
+
+header{
+    background-color: #597520;
+    grid-area: cab; /* Esta linha atribui ao elemento header uma área de grade chamada "cab". Isso sugere que o elemento header será posicionado dentro de um layout de grade CSS maior que usa essa área de grade "cab" */
+    display: flex; /* Com display: flex;, você pode alinhar, distribuir e ajustar o espaço entre os elementos filhos do header de maneira mais eficaz. */
+    padding: 2rem; /* O preenchimento interno cria espaço entre o conteúdo dentro desses elementos e suas bordas. */
+    border: solid #495f1e;; /* A borda será sólida (não pontilhada ou tracejada) e terá a mesma largura em todos os lados do elemento. */
+}
+
+body{
+    background-color: #9eb36d;
+    border: 2px solid #58422c;
+    display: grid; /*. Isso permite que você crie layouts complexos usando um sistema de grade CSS.*/
+    grid-template-areas:  /*Esta propriedade define as áreas da grade e como os elementos devem ser distribuídos dentro delas. Você está criando três áreas: "cab" (cabeçalho), "sec" (conteúdo secundário) e "rod" (rodapé). As áreas estão organizadas em três linhas e três colunas.*/
+    "cab cab cab"
+    "pri pri pri"
+    "rod rod rod";
+    grid-gap: 10px; /*Isso cria espaço entre os elementos dentro da grade.*/
+    grid-template-columns: 20% auto auto; /*Isso cria espaço entre os elementos dentro da grade.*/
+    grid-template-rows: auto 3300px auto; /*Define o tamanho das linhas na grade.*/
+    margin: 0 auto;
+    box-sizing: border-box; /* Isso significa que o tamanho total do elemento incluirá a borda e o preenchimento, em vez de adicionar o preenchimento e a borda ao tamanho especificado.*/
+    min-height: 100vh; /* Isso garante que o contêiner tenha pelo menos a altura da tela inteira.*/
+    width: 1380px;
+    padding: 5px 5px 5px 5px; /*Define a largura do contêiner */
+}
+
+main{
+    justify-content: center; /*isso centraliza o conteúdo dentro do contêiner horizontalmente.*/
+    grid-area: pri;
+    border: #2034758e;
+}
+
+footer{
+    background-color: #597520;
+    grid-area: rod;
+    display: flex;
+    padding: 2rem;
+    border: solid #495f1e;
+}
+
+.logo{ /* TEM QUE FAZER */
+    max-width: 10rem; /* Isso é útil para garantir que a imagem do logotipo não fique muito larga e distorcida em tamanhos de tela maiores. */
+    max-height: 10rem; /* Isso impede que a imagem do logotipo fique muito alta e desproporcional em relação à largura. */
+    border-radius: 100%; /* Isso cria um efeito de borda arredondada, transformando efetivamente o elemento em um círculo. */
+}
+
+.cards{
+    border: solid #f48d27;
+    display: grid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 710px;
+    margin: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    background-color: #31420c;
+    gap: 60px;
+}
+
+.card{
+    display: flex;
+    border: solid #752020;
+    border-radius: 10px;
+    transition: 0.7s;
+    text-align: center;
+    flex-wrap: wrap; /*Essa propriedade define o comportamento de quebra de linha dos itens flexíveis dentro do contêiner flex. Quando definida como wrap, os itens flexíveis são dispostos em várias linhas (ou colunas, dependendo da direção principal) à medida que o espaço disponível se esgota. Isso significa que, se houver mais itens flexíveis do que o contêiner pode acomodar em uma única linha (ou coluna), eles serão distribuídos em linhas (ou colunas) adicionais.*/
+    flex-direction: column; /*Essa propriedade define a direção principal do contêiner flex. Quando definida como column, os itens flexíveis são empilhados verticalmente. Isso significa que os itens flexíveis fluem de cima para baixo dentro do contêiner, em vez de serem dispostos horizontalmente em uma única linha. A direção principal pode ser row (padrão), que coloca os itens flexíveis em uma única linha horizontal, ou column, que coloca os itens em uma única coluna vertical.*/
+}
+.card:hover{
+    background-color:#5975208e;
+}
+
+.imagem{
+    display: block;
+    height: auto;
+    width: 220px;
+    border-radius: 30px;
+    margin: 0px auto;
+}
+
+.nome{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(224, 224, 224);
+    line-height: 0px;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.informações{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #597520;
+    color: #31420c;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+.informações:hover{
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
