@@ -12,15 +12,16 @@
 
 header{
     background-color: #597520;
+    opacity: 50%;
     grid-area: cab; /* Esta linha atribui ao elemento header uma área de grade chamada "cab". Isso sugere que o elemento header será posicionado dentro de um layout de grade CSS maior que usa essa área de grade "cab" */
     display: flex; /* Com display: flex;, você pode alinhar, distribuir e ajustar o espaço entre os elementos filhos do header de maneira mais eficaz. */
     padding: 2rem; /* O preenchimento interno cria espaço entre o conteúdo dentro desses elementos e suas bordas. */
-    border: solid #495f1e;; /* A borda será sólida (não pontilhada ou tracejada) e terá a mesma largura em todos os lados do elemento. */
+    border: 2px solid whitesmoke; /* A borda será sólida (não pontilhada ou tracejada) e terá a mesma largura em todos os lados do elemento. */
+    width: auto;
 }
 
 body{
-    background-color: #9eb36d;
-    border: 2px solid #58422c;
+    background-color: white;
     display: grid; /*. Isso permite que você crie layouts complexos usando um sistema de grade CSS.*/
     grid-template-areas:  /*Esta propriedade define as áreas da grade e como os elementos devem ser distribuídos dentro delas. Você está criando três áreas: "cab" (cabeçalho), "sec" (conteúdo secundário) e "rod" (rodapé). As áreas estão organizadas em três linhas e três colunas.*/
     "cab cab cab"
@@ -32,7 +33,7 @@ body{
     margin: 0 auto;
     box-sizing: border-box; /* Isso significa que o tamanho total do elemento incluirá a borda e o preenchimento, em vez de adicionar o preenchimento e a borda ao tamanho especificado.*/
     min-height: 100vh; /* Isso garante que o contêiner tenha pelo menos a altura da tela inteira.*/
-    width: 1380px;
+    width: 1650px;
     padding: 5px 5px 5px 5px; /*Define a largura do contêiner */
 }
 
@@ -44,10 +45,11 @@ main{
 
 footer{
     background-color: #597520;
+    opacity: 50%;
     grid-area: rod;
     display: flex;
     padding: 2rem;
-    border: solid #495f1e;
+    border: 2px solid whitesmoke;
 }
 
 .logo{ /* TEM QUE FAZER */
@@ -65,6 +67,8 @@ footer{
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     background-color: #31420c;
     gap: 60px;
+    height: 200px;
+    width: 200px;
 }
 
 .card{
